@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operational Chaos Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex justify-center">
+<div class="relative flex h-full min-h-screen w-full max-w-[480px] flex-col overflow-x-hidden bg-background-light dark:bg-background-dark pb-8">
+<!-- Header -->
+<div class="flex items-center justify-between p-4 pb-2 pt-6 sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary">
+<span class="material-symbols-outlined text-white text-xl">analytics</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">OPS CONTROL AI™</h2>
+</div>
+<button class="text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Hero / Title Section -->
+<div class="px-4 pt-6 pb-2">
+<h1 class="text-[#111418] dark:text-white text-[32px] font-extrabold leading-[1.2] tracking-tight mb-2">
+                Operational Chaos <span class="text-primary">Calculator</span>
+</h1>
+<p class="text-[#637588] dark:text-[#9da8b9] text-base font-normal leading-normal">
+                Quantify the hidden cost of inefficiency. Input your metrics below to reveal how much money you are leaving on the table.
+            </p>
+</div>
+<div class="h-4"></div>
+<!-- Form Section -->
+<div class="flex flex-col gap-6 px-4">
+<!-- Input 1: Team Size -->
+<div class="flex flex-col gap-2">
+<label class="text-[#111418] dark:text-white text-sm font-semibold leading-normal">Team Size (Employees)</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 material-symbols-outlined text-[#9da8b9]">groups</span>
+<input class="w-full bg-white dark:bg-[#1C2632] text-[#111418] dark:text-white placeholder:text-[#9da8b9] rounded-xl border-0 ring-1 ring-[#e5e7eb] dark:ring-[#344054] focus:ring-2 focus:ring-primary h-14 pl-12 pr-4 text-lg font-medium shadow-sm transition-all" placeholder="e.g. 50" type="number" value="25"/>
+</div>
+</div>
+<!-- Input 2: Hours Lost (Slider) -->
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-[#1C2632] p-5 shadow-sm ring-1 ring-[#e5e7eb] dark:ring-[#344054]">
+<div class="flex items-center justify-between">
+<label class="text-[#111418] dark:text-white text-sm font-semibold leading-normal flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+                        Wasted Time / Person
+                    </label>
+<span class="text-primary text-base font-bold bg-primary/10 px-2 py-0.5 rounded">4 hrs/wk</span>
+</div>
+<div class="flex items-center gap-4 pt-2">
+<span class="text-[#637588] dark:text-[#9da8b9] text-xs font-medium">0</span>
+<div class="relative flex h-6 w-full items-center">
+<div class="absolute h-1.5 w-full rounded-full bg-[#e5e7eb] dark:bg-[#344054]"></div>
+<!-- Active track -->
+<div class="absolute h-1.5 rounded-full bg-primary w-[30%]"></div>
+<!-- Thumb -->
+<div class="absolute left-[30%] h-6 w-6 rounded-full border-2 border-white dark:border-[#1C2632] bg-primary shadow-md flex items-center justify-center cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+<span class="text-[#637588] dark:text-[#9da8b9] text-xs font-medium">40</span>
+</div>
+<p class="text-[#637588] dark:text-[#9da8b9] text-xs mt-1">Hours spent on non-revenue generating tasks.</p>
+</div>
+<!-- Input 3: Revenue -->
+<div class="flex flex-col gap-2">
+<label class="text-[#111418] dark:text-white text-sm font-semibold leading-normal">Average Monthly Revenue</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 material-symbols-outlined text-[#9da8b9] font-bold">attach_money</span>
+<input class="w-full bg-white dark:bg-[#1C2632] text-[#111418] dark:text-white placeholder:text-[#9da8b9] rounded-xl border-0 ring-1 ring-[#e5e7eb] dark:ring-[#344054] focus:ring-2 focus:ring-primary h-14 pl-12 pr-4 text-lg font-medium shadow-sm transition-all" placeholder="e.g. 100,000" type="text" value="150,000"/>
+</div>
+</div>
+<!-- Calculate Button -->
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 transition-all hover:bg-primary/90 hover:scale-[1.01] active:scale-[0.98] mt-2 shadow-lg shadow-primary/25">
+<span class="material-symbols-outlined text-white">calculate</span>
+<span class="text-white text-lg font-bold tracking-wide">CALCULATE LOSS</span>
+</button>
+</div>
+<div class="h-8"></div>
+<!-- Result Section -->
+<div class="mx-4 relative overflow-hidden rounded-2xl bg-[#111418] dark:bg-[#0B1016] border border-[#283039] p-6 text-center">
+<!-- Decorative background gradient -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-500 to-red-500"></div>
+<div class="absolute -top-[100px] -right-[100px] w-[200px] h-[200px] bg-red-500/5 blur-[80px] rounded-full pointer-events-none"></div>
+<p class="text-[#9da8b9] text-sm font-medium uppercase tracking-wider mb-2">Estimated Monthly Waste</p>
+<div class="flex items-center justify-center gap-1 mb-1">
+<h2 class="text-red-500 dark:text-red-400 text-4xl sm:text-5xl font-extrabold tracking-tight">-$12,500</h2>
+</div>
+<p class="text-[#637588] text-sm mb-6">per month in lost productivity</p>
+<div class="h-px w-full bg-[#283039] mb-6"></div>
+<div class="flex flex-col gap-3">
+<h3 class="text-white text-lg font-bold">Stop the bleeding.</h3>
+<p class="text-[#9da8b9] text-sm mb-2">See how OPS CONTROL AI™ can recover these lost hours automatically.</p>
+<button class="group flex w-full items-center justify-center gap-2 rounded-xl bg-white dark:bg-white px-5 py-3.5 transition-colors hover:bg-gray-100">
+<span class="text-[#111418] text-base font-bold">Eliminate Chaos Now</span>
+<span class="material-symbols-outlined text-[#111418] group-hover:translate-x-1 transition-transform text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="h-8"></div>
+<!-- Footer / Trust -->
+<div class="flex flex-col items-center gap-4 px-6 text-center opacity-60">
+<p class="text-[#637588] dark:text-[#9da8b9] text-xs font-medium uppercase tracking-widest">Trusted by efficient teams</p>
+<div class="flex gap-6 items-center justify-center grayscale opacity-70">
+<!-- Placeholder for logos, using text for now as images are not allowed to be generated from scratch without url -->
+<div class="h-6 w-20 rounded bg-[#637588]/20"></div>
+<div class="h-6 w-20 rounded bg-[#637588]/20"></div>
+<div class="h-6 w-20 rounded bg-[#637588]/20"></div>
+</div>
+</div>
+<div class="h-8"></div>
+</div>
+</body></html>

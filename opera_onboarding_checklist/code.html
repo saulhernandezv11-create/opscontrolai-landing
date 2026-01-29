@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OPERA Onboarding Checklist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .step-gradient {
+            background: linear-gradient(135deg, rgba(19, 109, 236, 0.05) 0%, rgba(16, 24, 34, 0) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display">
+<!-- iOS Status Bar Placeholder (Visual) -->
+<div class="h-11 w-full bg-background-light dark:bg-background-dark"></div>
+<!-- Top AppBar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur">
+<div class="flex items-center px-6 py-4 justify-between">
+<div class="flex size-10 shrink-0 items-center justify-start text-slate-400">
+<span class="material-symbols-outlined cursor-pointer">close</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Setting up your Masterpiece</h2>
+<div class="flex size-10 items-center justify-end text-slate-400">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</div>
+<!-- ProgressBar Section -->
+<div class="flex flex-col gap-2 px-6 pb-6">
+<div class="flex justify-between items-end mb-1">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-widest">Onboarding Progress</p>
+<p class="text-primary text-sm font-bold">25%</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-[#282f39] h-1.5 overflow-hidden">
+<div class="h-full rounded-full bg-primary shadow-[0_0_8px_rgba(19,109,236,0.4)]" style="width: 25%;"></div>
+</div>
+</div>
+</div>
+<!-- Checklist Content -->
+<main class="flex flex-col gap-4 p-6">
+<div class="text-sm font-medium text-slate-400 mb-2 px-1">Required Steps</div>
+<!-- Item 1: Completed -->
+<div class="relative flex flex-col gap-4 bg-white dark:bg-[#1a232e] p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-full bg-emerald-500/10 text-emerald-500 shrink-0 size-12">
+<span class="material-symbols-outlined text-[28px]">check_circle</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-base font-bold">Strategic Diagnosis</p>
+<span class="text-[10px] bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">Done</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1 leading-relaxed">Analyze your current business architecture and define goals.</p>
+</div>
+</div>
+<div class="flex justify-end pt-2 border-t border-slate-100 dark:border-slate-800/50">
+<button class="flex items-center justify-center rounded-lg h-9 px-6 bg-slate-100 dark:bg-[#282f39] text-slate-700 dark:text-white text-sm font-bold tracking-tight">
+                    Review
+                </button>
+</div>
+</div>
+<!-- Item 2: Active -->
+<div class="relative flex flex-col gap-4 bg-white dark:bg-[#1a232e] p-5 rounded-xl border-2 border-primary shadow-lg overflow-hidden step-gradient">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-full bg-primary/10 text-primary shrink-0 size-12 ring-4 ring-primary/5">
+<span class="material-symbols-outlined text-[28px]">account_tree</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-base font-bold">Process Mapping</p>
+<div class="size-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1 leading-relaxed">Visualizing your operational workflows for AI readiness.</p>
+</div>
+</div>
+<div class="flex justify-end pt-2">
+<button class="flex items-center justify-center rounded-lg h-10 px-8 bg-primary text-white text-sm font-bold tracking-tight shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                    Start Step
+                </button>
+</div>
+</div>
+<!-- Item 3: Locked/Pending -->
+<div class="relative flex flex-col gap-4 bg-slate-50/50 dark:bg-[#161d26] p-5 rounded-xl border border-slate-200 dark:border-slate-800 opacity-70">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-full bg-slate-200 dark:bg-[#282f39] text-slate-400 dark:text-slate-500 shrink-0 size-12">
+<span class="material-symbols-outlined text-[28px]">smart_toy</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-slate-900 dark:text-white text-base font-bold">AI Agent Activation</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1 leading-relaxed">Deploying your custom intelligence layer across systems.</p>
+</div>
+<div class="text-slate-400">
+<span class="material-symbols-outlined text-sm">lock</span>
+</div>
+</div>
+<div class="flex justify-end pt-2 opacity-50">
+<button class="flex items-center justify-center rounded-lg h-9 px-6 bg-slate-200 dark:bg-[#282f39] text-slate-500 dark:text-slate-400 text-sm font-bold tracking-tight cursor-not-allowed" disabled="">
+                    Locked
+                </button>
+</div>
+</div>
+<!-- Item 4: Locked/Pending -->
+<div class="relative flex flex-col gap-4 bg-slate-50/50 dark:bg-[#161d26] p-5 rounded-xl border border-slate-200 dark:border-slate-800 opacity-70">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-full bg-slate-200 dark:bg-[#282f39] text-slate-400 dark:text-slate-500 shrink-0 size-12">
+<span class="material-symbols-outlined text-[28px]">dashboard_customize</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-slate-900 dark:text-white text-base font-bold">Dashboard Sync</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1 leading-relaxed">Finalizing your real-time command center interface.</p>
+</div>
+<div class="text-slate-400">
+<span class="material-symbols-outlined text-sm">lock</span>
+</div>
+</div>
+<div class="flex justify-end pt-2 opacity-50">
+<button class="flex items-center justify-center rounded-lg h-9 px-6 bg-slate-200 dark:bg-[#282f39] text-slate-500 dark:text-slate-400 text-sm font-bold tracking-tight cursor-not-allowed" disabled="">
+                    Locked
+                </button>
+</div>
+</div>
+</main>
+<!-- Support Footer -->
+<footer class="mt-8 pb-12 px-6 text-center">
+<p class="text-slate-500 text-sm font-medium">Need help setting up your instance?</p>
+<button class="mt-2 text-primary text-sm font-bold flex items-center justify-center gap-1 mx-auto hover:underline underline-offset-4">
+<span class="material-symbols-outlined text-base">support_agent</span>
+            Talk to an OPERA Expert
+        </button>
+</footer>
+<!-- Bottom Indicator -->
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</body></html>
