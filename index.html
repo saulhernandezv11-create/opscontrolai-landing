@@ -1,132 +1,157 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
+<html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Operational Chaos Calculator</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>OPERA™ Chaos Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "primary": "#136dec",
-                "background-light": "#f6f7f8",
-                "background-dark": "#101822",
-              },
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "gold": "#D4AF37",
+                        "gold-muted": "#AA8E2F",
+                        "dark-accent": "#0A0A0B",
+                        "executive-bg": "#050505",
+                        "slate-950": "#020617"
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "serif": ["Cormorant Garamond", "serif"]
+                    }
+                },
             },
-            fontFamily: {
-              "display": ["Manrope", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
         }
-      </script>
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --gold: #D4AF37;
+            --silver: #C0C0C0;
+        }
+        body {
+            background-color: #050505;
+        }
+        .executive-border {
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .executive-gradient {
+            background: linear-gradient(135deg, #0A0A0B 0%, #111112 100%);
+        }
+    </style>
 <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex justify-center">
-<div class="relative flex h-full min-h-screen w-full max-w-[480px] flex-col overflow-x-hidden bg-background-light dark:bg-background-dark pb-8">
-<!-- Header -->
-<div class="flex items-center justify-between p-4 pb-2 pt-6 sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
-<div class="flex items-center gap-2">
-<div class="flex h-8 w-8 items-center justify-center rounded bg-primary">
-<span class="material-symbols-outlined text-white text-xl">analytics</span>
+  </head>
+<body class="bg-executive-bg text-gray-200 font-sans min-h-screen flex justify-center">
+<div class="relative flex h-full min-h-screen w-full max-w-[480px] flex-col overflow-x-hidden bg-executive-bg pb-12">
+<div class="flex items-center justify-between p-6 sticky top-0 z-50 bg-executive-bg/80 backdrop-blur-xl border-b border-white/5">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center border border-gold/30 rounded-full">
+<span class="material-symbols-outlined text-gold text-2xl font-light">account_balance_wallet</span>
 </div>
-<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">OPS CONTROL AI™</h2>
+<h2 class="text-white text-xl font-medium tracking-[0.2em] uppercase">OPERA™</h2>
 </div>
-<button class="text-[#111418] dark:text-white">
-<span class="material-symbols-outlined">menu</span>
+<button class="text-white/70">
+<span class="material-symbols-outlined text-3xl font-light">menu</span>
 </button>
 </div>
-<!-- Hero / Title Section -->
-<div class="flex flex-col gap-4 px-4 py-6">
-<h1 class="text-[#111418] dark:text-white text-4xl font-bold leading-tight tracking-[-0.033em]">¿Cuánto caos operacional tienes?</h1>
-<p class="text-[#637588] dark:text-[#9dabb8] text-base font-normal leading-normal">
-Descubre el nivel de caos en tus operaciones con nuestra calculadora. Responde algunas preguntas y obtén un diagnóstico personalizado con recomendaciones para optimizar tu infraestructura de TI.
-</p>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Comenzar evaluación</span>
+<div class="px-6 pt-10 pb-4 text-center">
+<h1 class="font-serif text-white text-[42px] leading-[1.1] mb-4">
+            Chaos <span class="italic text-gold">Calculator</span>
+</h1>
+<div class="h-[1px] w-12 bg-gold/50 mx-auto mb-6"></div>
+<p class="text-gray-400 text-sm font-light tracking-wide leading-relaxed px-4">
+            EXECUTIVE AUDIT: QUANTIFY THE OPERATIONAL LEAKAGE WITHIN YOUR CORE BUSINESS INFRASTRUCTURE.
+        </p>
+</div>
+<div class="flex flex-col gap-8 px-6 mt-8">
+<div class="flex flex-col gap-3">
+<label class="text-gold/80 text-[10px] uppercase tracking-[0.2em] font-semibold">Total Headcount</label>
+<div class="relative group">
+<input class="w-full bg-white/5 text-white border-0 border-b border-white/20 focus:border-gold focus:ring-0 h-14 pl-0 pr-4 text-xl font-light transition-all placeholder:text-white/10" placeholder="00" type="number" value="25"/>
+</div>
+</div>
+<div class="flex flex-col gap-4 py-4 border-y border-white/5">
+<div class="flex items-center justify-between">
+<label class="text-gold/80 text-[10px] uppercase tracking-[0.2em] font-semibold">Weekly Leakage (Hrs)</label>
+<span class="text-white text-lg font-light">4.0 <span class="text-[10px] text-gray-500 uppercase ml-1">HRS</span></span>
+</div>
+<div class="relative flex h-6 w-full items-center">
+<div class="absolute h-[1px] w-full bg-white/10"></div>
+<div class="absolute h-[1px] bg-gold w-[30%]"></div>
+<div class="absolute left-[30%] h-4 w-4 rounded-full bg-gold shadow-[0_0_15px_rgba(212,175,55,0.5)] cursor-pointer"></div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<label class="text-gold/80 text-[10px] uppercase tracking-[0.2em] font-semibold">Monthly Gross Revenue</label>
+<div class="relative">
+<span class="absolute left-0 top-3 text-white/30 text-xl font-light">$</span>
+<input class="w-full bg-transparent text-white border-0 border-b border-white/20 focus:border-gold focus:ring-0 h-14 pl-6 pr-4 text-xl font-light transition-all" type="text" value="150,000"/>
+</div>
+</div>
+<button class="mt-4 flex w-full items-center justify-center gap-3 bg-white text-black py-5 transition-all hover:bg-gold hover:text-white active:scale-[0.99] uppercase text-[12px] font-bold tracking-[0.3em]">
+            Run Diagnostic
+        </button>
+</div>
+<div class="mx-6 mt-12 mb-8 relative">
+<div class="executive-gradient executive-border p-8 relative">
+<div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-gold/40"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/40"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-gold/40"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-gold/40"></div>
+<div class="mb-8 flex justify-between items-start">
+<div>
+<p class="text-[10px] text-gold uppercase tracking-[0.2em] font-bold mb-1">Impact Analysis</p>
+<h3 class="font-serif text-2xl text-white">Efficiency Deficit</h3>
+</div>
+<span class="material-symbols-outlined text-gold/50">verified_user</span>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-[11px] text-gray-500 uppercase tracking-widest mb-2">
+<span>Monthly Capital Erosion</span>
+<span>USD</span>
+</div>
+<div class="text-4xl font-light text-white tracking-tight">
+                        $12,500<span class="text-gold text-lg ml-1">.00</span>
+</div>
+</div>
+<div class="pt-6 border-t border-white/5">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-[9px] text-gray-500 uppercase tracking-widest">Annual Loss</p>
+<p class="text-lg text-white font-light">$150,000</p>
+</div>
+<div>
+<p class="text-[9px] text-gray-500 uppercase tracking-widest">Op. Efficiency</p>
+<p class="text-lg text-red-500/80 font-light">-14.2%</p>
+</div>
+</div>
+</div>
+<p class="text-gray-500 text-[11px] leading-relaxed italic border-l border-gold/30 pl-4 py-1">
+                    This figure represents unrecovered operational overhead directly attributable to manual process friction.
+                </p>
+<button class="group w-full border border-gold/50 py-4 flex items-center justify-center gap-2 hover:bg-gold/10 transition-colors">
+<span class="text-gold text-[11px] uppercase tracking-[0.2em] font-bold">Deploy OPERA™ Protocol</span>
+<span class="material-symbols-outlined text-gold text-sm group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
 </button>
 </div>
-<!-- Features Grid -->
-<div class="grid grid-cols-2 gap-4 p-4">
-<div class="flex flex-col gap-3 pb-3">
-<div class="w-full bg-center bg-no-cover bg-cover aspect-video rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/d4a29074-6d88-4e96-88a4-71bdfce9d79d.png');"></div>
-<div>
-<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Infraestructura Cloud</p>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Optimiza y automatiza tu infraestructura</p>
 </div>
 </div>
-<div class="flex flex-col gap-3 pb-3">
-<div class="w-full bg-center bg-no-cover bg-cover aspect-video rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/a3a2e6fc-c09b-41aa-9d23-7f72d8e0f09f.png');"></div>
-<div>
-<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Automatización IA</p>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Procesos inteligentes y eficientes</p>
+<div class="px-6 flex flex-col items-center gap-6 opacity-40">
+<p class="text-[9px] uppercase tracking-[0.3em] font-semibold text-white/60">Institutional Grade Automation</p>
+<div class="flex gap-8 items-center justify-center grayscale contrast-125">
+<div class="h-4 w-16 border border-white/20"></div>
+<div class="h-4 w-16 border border-white/20"></div>
+<div class="h-4 w-16 border border-white/20"></div>
+</div>
+<p class="text-[10px] text-white/20 mt-4 tracking-tighter">© 2024 OPERA SYSTEMS INC. ALL RIGHTS RESERVED.</p>
 </div>
 </div>
-<div class="flex flex-col gap-3 pb-3">
-<div class="w-full bg-center bg-no-cover bg-cover aspect-video rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/c0f6a8d9-7a92-4769-b46b-0f87fbb3a30f.png');"></div>
-<div>
-<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Monitoreo 24/7</p>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Supervisión continua de sistemas</p>
-</div>
-</div>
-<div class="flex flex-col gap-3 pb-3">
-<div class="w-full bg-center bg-no-cover bg-cover aspect-video rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/28f49fb3-4a6a-463f-baac-f2ce17d21d8e.png');"></div>
-<div>
-<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Soporte Experto</p>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Equipo especializado siempre disponible</p>
-</div>
-</div>
-</div>
-<!-- Stats Section -->
-<h2 class="text-[#111418] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Resultados que hablan por sí mismos</h2>
-<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-<div class="flex flex-col gap-3 pb-3">
-<div class="flex flex-col gap-1">
-<h2 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">95%</h2>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Reducción en tiempo de respuesta</p>
-</div>
-</div>
-<div class="flex flex-col gap-3 pb-3">
-<div class="flex flex-col gap-1">
-<h2 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">80%</h2>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Ahorro en costos operativos</p>
-</div>
-</div>
-<div class="flex flex-col gap-3 pb-3">
-<div class="flex flex-col gap-1">
-<h2 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">99.9%</h2>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Disponibilidad garantizada</p>
-</div>
-</div>
-</div>
-<!-- CTA Section -->
-<h2 class="text-[#111418] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Empieza hoy mismo</h2>
-<div class="flex flex-col gap-3 p-4">
-<div class="flex min-h-[72px] flex-col gap-1 rounded-xl border border-[#dce0e5] dark:border-[#283139] p-4">
-<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Agenda una consulta gratuita</p>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">
-Nuestros expertos analizarán tu infraestructura y te mostrarán cómo podemos ayudarte
-</p>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Contactar ahora</span>
-</button>
-</div>
-<!-- Footer -->
-<div class="flex flex-col gap-2 p-4 text-center">
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">© 2024 OPS CONTROL AI™</p>
-<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Transformando operaciones con inteligencia artificial</p>
-</div>
-</div>
-</body>
-</html>
+
+</body></html>
