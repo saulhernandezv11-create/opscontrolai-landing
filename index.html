@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operational Chaos Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#136dec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101822",
+              },
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex justify-center">
+<div class="relative flex h-full min-h-screen w-full max-w-[480px] flex-col overflow-x-hidden bg-background-light dark:bg-background-dark pb-8">
+<!-- Header -->
+<div class="flex items-center justify-between p-4 pb-2 pt-6 sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary">
+<span class="material-symbols-outlined text-white text-xl">analytics</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">OPS CONTROL AI™</h2>
+</div>
+<button class="text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Hero / Title Section -->
+<div class="flex flex-col gap-4 px-4 py-6">
+<h1 class="text-[#111418] dark:text-white text-4xl font-bold leading-tight tracking-[-0.033em]">¿Cuánto caos operacional tienes?</h1>
+<p class="text-[#637588] dark:text-[#9dabb8] text-base font-normal leading-normal">
+Descubre el nivel de caos en tus operaciones con nuestra calculadora. Responde algunas preguntas y obtén un diagnóstico personalizado con recomendaciones para optimizar tu infraestructura de TI.
+</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Comenzar evaluación</span>
+</button>
+</div>
+<!-- Features Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-cover bg-cover aspect-video rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/d4a29074-6d88-4e96-88a4-71bdfce9d79d.png');"></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Infraestructura Cloud</p>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Optimiza y automatiza tu infraestructura</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-cover bg-cover aspect-video rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/a3a2e6fc-c09b-41aa-9d23-7f72d8e0f09f.png');"></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Automatización IA</p>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Procesos inteligentes y eficientes</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-cover bg-cover aspect-video rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/c0f6a8d9-7a92-4769-b46b-0f87fbb3a30f.png');"></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Monitoreo 24/7</p>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Supervisión continua de sistemas</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-cover bg-cover aspect-video rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/28f49fb3-4a6a-463f-baac-f2ce17d21d8e.png');"></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Soporte Experto</p>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Equipo especializado siempre disponible</p>
+</div>
+</div>
+</div>
+<!-- Stats Section -->
+<h2 class="text-[#111418] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Resultados que hablan por sí mismos</h2>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="flex flex-col gap-1">
+<h2 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">95%</h2>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Reducción en tiempo de respuesta</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="flex flex-col gap-1">
+<h2 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">80%</h2>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Ahorro en costos operativos</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="flex flex-col gap-1">
+<h2 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">99.9%</h2>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Disponibilidad garantizada</p>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<h2 class="text-[#111418] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Empieza hoy mismo</h2>
+<div class="flex flex-col gap-3 p-4">
+<div class="flex min-h-[72px] flex-col gap-1 rounded-xl border border-[#dce0e5] dark:border-[#283139] p-4">
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Agenda una consulta gratuita</p>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">
+Nuestros expertos analizarán tu infraestructura y te mostrarán cómo podemos ayudarte
+</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Contactar ahora</span>
+</button>
+</div>
+<!-- Footer -->
+<div class="flex flex-col gap-2 p-4 text-center">
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">© 2024 OPS CONTROL AI™</p>
+<p class="text-[#637588] dark:text-[#9dabb8] text-sm font-normal leading-normal">Transformando operaciones con inteligencia artificial</p>
+</div>
+</div>
+</body>
+</html>
