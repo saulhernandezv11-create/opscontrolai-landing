@@ -1,0 +1,51 @@
+# Node
+node_modules/
+dist/
+build/
+.next/
+
+# Environment
+.env
+.env.local
+.env.*.local
+local.settings.json
+
+# Azure Functions
+bin/
+obj/
+.python_packages/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Build artifacts
+*.tsbuildinfo
+
+# Infrastructure
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Azurite (local storage emulator)
+__azurite_db_blob__.json
+__azurite_db_queue__.json
+__azurite_db_table__.json
+__blobstorage__/
+__queuestorage__/

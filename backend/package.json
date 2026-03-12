@@ -1,0 +1,71 @@
+{
+    "name": "opscontrol-ai-backend",
+    "version": "2.0.0",
+    "description": "OpsControl AI WhatsApp Automation – Express.js Backend (Free Tier)",
+    "main": "dist/server.js",
+    "scripts": {
+        "build": "tsc -p tsconfig.json",
+        "build:watch": "tsc -p tsconfig.json --watch",
+        "start": "node dist/server.js",
+        "dev": "ts-node src/server.ts",
+        "test": "jest --passWithNoTests",
+        "test:coverage": "jest --coverage",
+        "lint": "eslint 'src/**/*.ts'",
+        "lint:fix": "eslint 'src/**/*.ts' --fix",
+        "format": "prettier --write 'src/**/*.ts'"
+    },
+    "engines": {
+        "node": ">=20.0.0"
+    },
+    "dependencies": {
+        "express": "^4.19.2",
+        "mongoose": "^8.5.1",
+        "bull": "^4.16.0",
+        "node-cron": "^3.0.3",
+        "openai": "^4.47.1",
+        "axios": "^1.7.2",
+        "dotenv": "^16.4.5",
+        "crypto": "^1.0.1",
+        "jsonwebtoken": "^9.0.2",
+        "jwks-rsa": "^3.1.0",
+        "uuid": "^10.0.0",
+        "i18next": "^23.11.5",
+        "express-rate-limit": "^7.4.0",
+        "helmet": "^7.1.0",
+        "cors": "^2.8.5",
+        "multer": "^1.4.5-lts.1",
+        "form-data": "^4.0.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/bull": "^4.10.0",
+        "@types/node-cron": "^3.0.11",
+        "@types/jest": "^29.5.12",
+        "@types/jsonwebtoken": "^9.0.6",
+        "@types/node": "^20.14.2",
+        "@types/uuid": "^10.0.0",
+        "@types/cors": "^2.8.17",
+        "@types/multer": "^1.4.11",
+        "@typescript-eslint/eslint-plugin": "^7.13.0",
+        "@typescript-eslint/parser": "^7.13.0",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.29.1",
+        "jest": "^29.7.0",
+        "prettier": "^3.3.2",
+        "ts-jest": "^29.2.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.2",
+        "husky": "^9.0.11"
+    },
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "testPathPattern": "tests/unit",
+        "collectCoverageFrom": [
+            "src/**/*.ts",
+            "!src/**/*.test.ts"
+        ]
+    }
+}

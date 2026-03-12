@@ -1,0 +1,16 @@
+# admin-dashboard/Dockerfile.dev
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Ensure we have package.json
+COPY package*.json ./
+
+# Install dependencies if not present in the volume
+RUN npm install
+
+# Expose Vite's default port
+EXPOSE 5173
+
+# Start Vite server (poll needed for Windows volumes sometimes, but standard dev is fine)
+CMD ["npm", "run", "dev", "--", "--host"]

@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environment": {
+            "value": "dev"
+        },
+        "location": {
+            "value": "southcentralus"
+        },
+        "secondaryLocation": {
+            "value": "eastus"
+        },
+        "adminEmail": {
+            "value": "saul.hernandezv11@gmail.com"
+        },
+        "openAiCapacity": {
+            "value": 5
+        },
+        "commonTags": {
+            "value": {
+                "Environment": "dev",
+                "Product": "OpsControlAI",
+                "CostCenter": "opscontrol-dev",
+                "ManagedBy": "Bicep"
+            }
+        }
+    }
+}

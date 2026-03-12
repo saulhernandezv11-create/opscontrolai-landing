@@ -1,0 +1,73 @@
+{
+    "es-MX": {
+        "dashboard": {
+            "welcome": "Bienvenido a OpsControl AI",
+            "overview": "Resumen",
+            "conversations": "Conversaciones",
+            "contacts": "Contactos",
+            "flows": "Flujos",
+            "settings": "Configuración",
+            "billing": "Facturación"
+        },
+        "metrics": {
+            "totalConversations": "Total de Conversaciones",
+            "avgResponseTime": "Tiempo de Respuesta Promedio",
+            "conversionRate": "Tasa de Conversión",
+            "tokenCost": "Costo de Tokens"
+        },
+        "conversations": {
+            "title": "Conversaciones",
+            "search": "Buscar por teléfono o nombre...",
+            "status": {
+                "active": "Activa",
+                "resolved": "Resuelta",
+                "handoff": "En espera de agente"
+            },
+            "handoffBtn": "Transferir a Agente",
+            "resolveBtn": "Marcar como Resuelta",
+            "exportBtn": "Exportar como PDF"
+        },
+        "flows": {
+            "title": "Flujos de Conversación",
+            "create": "Crear Flujo",
+            "noFlows": "No hay flujos configurados"
+        },
+        "contacts": {
+            "title": "Gestión de Contactos",
+            "addTag": "Agregar Etiqueta",
+            "export": "Exportar CSV",
+            "delete": "Eliminar"
+        },
+        "settings": {
+            "title": "Configuración del Negocio",
+            "businessName": "Nombre del Negocio",
+            "businessHours": "Horario de Atención",
+            "customResponses": "Respuestas Automáticas",
+            "save": "Guardar Cambios",
+            "webhookUrl": "URL del Webhook",
+            "copy": "Copiar"
+        },
+        "billing": {
+            "title": "Suscripción y Uso",
+            "currentPlan": "Plan Actual",
+            "upgrade": "Actualizar Plan",
+            "conversationsUsed": "Conversaciones Usadas",
+            "storageUsed": "Almacenamiento Usado",
+            "renewalDate": "Fecha de Renovación"
+        },
+        "errors": {
+            "generic": "Lo sentimos, ocurrió un error. Intenta de nuevo.",
+            "unauthorized": "Sesión expirada. Por favor inicia sesión nuevamente.",
+            "notFound": "Recurso no encontrado."
+        },
+        "actions": {
+            "save": "Guardar",
+            "cancel": "Cancelar",
+            "delete": "Eliminar",
+            "edit": "Editar",
+            "close": "Cerrar",
+            "loading": "Cargando...",
+            "confirm": "Confirmar"
+        }
+    }
+}

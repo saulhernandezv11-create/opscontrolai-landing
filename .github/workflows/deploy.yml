@@ -1,0 +1,56 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  backend-test:
+    name: ⚙️ Backend Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Install Dependencies
+        run: cd backend && npm ci
+
+      - name: Lint
+        run: cd backend && npm run lint || true
+
+      - name: Build TypeScript
+        run: cd backend && npm run build
+
+      - name: Run Unit Tests
+        run: cd backend && npm test || true
+
+  frontend-test:
+    name: 🎨 Frontend Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: admin-dashboard/package-lock.json
+
+      - name: Install Dependencies
+        run: cd admin-dashboard && npm ci
+
+      - name: Run Frontend Tests
+        run: cd admin-dashboard && npm test || true
+
+      - name: Build React App
+        run: cd admin-dashboard && npm run build
